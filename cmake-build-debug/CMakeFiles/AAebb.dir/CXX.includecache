@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+F:/cppProject/AAebb/head/cmdt.h
+queue
+-
+
+F:/cppProject/AAebb/src/main.cpp
+cstring
+-
+iostream
+-
+../head/cmdt.h
+F:/cppProject/AAebb/head/cmdt.h
+
