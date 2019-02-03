@@ -33,6 +33,7 @@ map<char, int> s2 = {
         {'d', 31},
         {'h', 61},
         {'f', 41},
+        {'r', 71},
 };
 
 map<char, int> s3 = {
@@ -78,7 +79,8 @@ void help_msg()
     "      -f  [job]        stop a job, and making the job working around\n"
     "   --fros [job,...]\n"\
     "       -F [job,...]    stop a list of job, and making them working\n"
-    "   --free [job]        free a stopped job\n"
+    "   --free [job]        free a stopped job\n" \
+    "   --remove [job]      remove a job from project"
     << endl;
 }
 void nextJump(int stat, char _nex)
@@ -186,6 +188,10 @@ void throw_parse_error(int stat)
         set_error_code_print(-46, "--frozen need arg");
     if (stat == -64)
         set_error_code_print(-64, "--help expected, not", cmd);
+    if (stat == -71)
+        set_error_code_print(-71, "--remove need arg");
+    if(stat== -76)
+        set_error_code_print(-76, "--remove expected, not", cmd);
 }
 
 void dispatch()
@@ -233,6 +239,9 @@ void dispatch()
             break;
         case 61:
             help();
+            break;
+        case 71:
+            remove();
             break;
     }
 }
@@ -297,6 +306,10 @@ void call(int stat)
             break;
         case 46:
             cout << "call job.frozens() with arg=" << arg << endl;
+            break;
+        case 76:
+            jp.deleteJobByName(string(arg));
+            jp.put();
             break;
     }
     arg[0] = 0;
@@ -466,7 +479,17 @@ void add()
     eat_arg(-24);
 }
 
-
+void remove()
+{
+    entry_check(71);
+    template_set_G_stat(71, 76,"emove");
+    if (__G__stat != 76)
+    {
+        __G__stat = -76;
+        throw_parse_error(__G__stat);
+    }
+    eat_arg(-71);
+}
 
 void jfree()
 {

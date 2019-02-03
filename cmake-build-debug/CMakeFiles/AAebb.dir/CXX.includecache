@@ -6,15 +6,55 @@
 
 #IncludeRegexTransform: 
 
+F:/cppProject/AAebb/head/IO.h
+string
+-
+iostream
+-
+
+F:/cppProject/AAebb/head/Job.h
+list
+-
+iostream
+-
+algorithm
+-
+fstream
+F:/cppProject/AAebb/head/fstream
+Project.h
+F:/cppProject/AAebb/head/Project.h
+symbol.h
+F:/cppProject/AAebb/head/symbol.h
+cstdio
+-
+
+F:/cppProject/AAebb/head/Project.h
+list
+-
+string
+-
+IO.h
+F:/cppProject/AAebb/head/IO.h
+
 F:/cppProject/AAebb/head/cmdt.h
 queue
 -
 
-F:/cppProject/AAebb/src/main.cpp
-cstring
+F:/cppProject/AAebb/head/symbol.h
+string
+-
+
+F:/cppProject/AAebb/src/cmdt.cpp
+map
+-
+queue
 -
 iostream
 -
+cstring
+-
+../head/Job.h
+F:/cppProject/AAebb/head/Job.h
 ../head/cmdt.h
 F:/cppProject/AAebb/head/cmdt.h
 

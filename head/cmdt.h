@@ -26,6 +26,8 @@ static void jfree();
 static void fro();
 static void fro_head();
 static void fros();
+static void help();
+static void remove();
 void throw_parse_error(int stat);
 void nextJump(int stat, char _nex);
 void dispatch();
