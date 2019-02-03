@@ -4,6 +4,7 @@
 #include <cstring>
 #include "../head/Job.h"
 #include "../head/cmdt.h"
+
 using namespace std;
 
 int __G__stat = 0;
@@ -12,23 +13,25 @@ int c_idx = 0;
 char cmd[100];
 char arg[100];
 
+// jump table
 map<char, int> s1 = {
         {'-', 2},
-        {'s', 15},
-        {'a', 23},
+        {'s', 11},
+        {'a', 24},
         {'A', 27},
-        {'d', 34},
+        {'d', 31},
         {'f', 44},
         {'F', 46},
         {'r', 50},
 };
 
-// jump table
+
 map<char, int> s2 = {
         {'p', 3},
         {'s', 11},
         {'a', 21},
         {'d', 31},
+        {'h', 61},
         {'f', 41},
 };
 
@@ -53,7 +56,31 @@ map<char, int> n3 = {
         {'s', 46},
 };
 
-
+void help_msg()
+{
+    cout <<
+    "Usage of commands:\n" \
+    "Management Of Project:\n" \
+    "   --pa [name]     create a project that named after name\n" \
+    "   --pc [name]     change the default project to name\n"\
+    "   --pd [name]     delete project named after name\n"
+    "Management Of Job:\n" \
+    "   --start     start up the default project\n" \
+    "               if the project have already started, this command will\n"\
+    "               upgrade the job tables\n" \
+    "   --done      finish the project\n"
+    "   --add+ [job]\n"\
+    "       -a [job]        add a single job into project\n"
+    "   --adds [job,...]\n" \
+    "       -A [job,...]    add a list of jobs into project\n"
+    "                       note:you can use \"\" to brace job list\n"
+    "   --fro  [job]\n"\
+    "      -f  [job]        stop a job, and making the job working around\n"
+    "   --fros [job,...]\n"\
+    "       -F [job,...]    stop a list of job, and making them working\n"
+    "   --free [job]        free a stopped job\n"
+    << endl;
+}
 void nextJump(int stat, char _nex)
 {
     map<char, int>::iterator look;
@@ -84,37 +111,31 @@ void nextJump(int stat, char _nex)
         return;
 
     // miss table
-    if (stat==1 && look==s1.end())
+    if (stat == 1 && look == s1.end())
     {
         __G__stat = -1;
         throw_parse_error(__G__stat);
-    }
-    else if (stat==2 && look==s2.end())
+    } else if (stat == 2 && look == s2.end())
     {
         __G__stat = -2;
         throw_parse_error(__G__stat);
-    }
-    else if (stat==3 && look==s3.end())
+    } else if (stat == 3 && look == s3.end())
     {
         __G__stat = -3;
         throw_parse_error(__G__stat);
-    }
-    else if (stat==23 && look==q3.end())
+    } else if (stat == 23 && look == q3.end())
     {
         __G__stat = -23;
         throw_parse_error(__G__stat);
-    }
-    else if (stat==42  && look==n2.end())
+    } else if (stat == 42 && look == n2.end())
     {
         __G__stat = -42;
         throw_parse_error(__G__stat);
-    }
-    else if (stat==43 && look==n3.end())
+    } else if (stat == 43 && look == n3.end())
     {
         __G__stat = -43;
         throw_parse_error(__G__stat);
-    }
-    else
+    } else
     {
         __G__stat = look->second;
     }
@@ -132,7 +153,7 @@ void throw_parse_error(int stat)
     if (stat == -15)
         set_error_code_print(-15, "'start' expected not :", cmd);
     if (stat == -34)
-        set_error_code_print(-34, "'start' expected not :", cmd);
+        set_error_code_print(-34, "'done' expected not :", cmd);
     if (stat == -1)
         set_error_code_print(-1, "'-' expected, not :", cmd);
     if (stat == -2)
@@ -163,6 +184,8 @@ void throw_parse_error(int stat)
         set_error_code_print(-44, "--frozen need arg");
     if (stat == -46)
         set_error_code_print(-46, "--frozen need arg");
+    if (stat == -64)
+        set_error_code_print(-64, "--help expected, not", cmd);
 }
 
 void dispatch()
@@ -208,6 +231,9 @@ void dispatch()
         case 27:
             adds();
             break;
+        case 61:
+            help();
+            break;
     }
 }
 
@@ -230,6 +256,9 @@ void call(int stat)
 
     switch (stat)
     {
+        case 64:
+            help_msg();
+            break;
         case 15:
             jp.startup();
             jp.join();
@@ -282,7 +311,7 @@ void run()
         return;
     }
 
-    while(!exec_queue.empty())
+    while (!exec_queue.empty())
     {
         pair<int, string> x = exec_queue.front();
         exec_queue.pop();
@@ -296,7 +325,7 @@ void head()
     for (char x = getChar();; x = getChar())
     {
         if (__G__stat == 0 && x == '-')
-            nextJump(0, x);
+            nextJump(__G__stat, x);
         else if (__G__stat == 1 && x == '-')
             nextJump(__G__stat, x);
         else if (__G__stat == 1 && isalpha(x))
@@ -318,7 +347,6 @@ void head()
         }
     }
 };
-
 inline void entry_check(int stat)
 {
     if (__G__stat != stat)
@@ -328,7 +356,7 @@ inline void entry_check(int stat)
     }
 }
 
-inline void template_set_G_stat(int start_stat, int end_stat, const char *stat_nex, int idx_nex)
+inline void template_set_G_stat(int start_stat, int end_stat, const char *stat_nex, int idx_nex = 0)
 {
     if (start_stat != end_stat)
     {
@@ -338,7 +366,9 @@ inline void template_set_G_stat(int start_stat, int end_stat, const char *stat_n
             __G__stat = ++start_stat;
             template_set_G_stat(start_stat, end_stat, stat_nex, ++idx_nex);
         } else
+        {
             return;
+        }
     }
 }
 
@@ -381,7 +411,12 @@ inline int eat_arg(int error_code)
     with_arg_check_exec(error_code);
     return a_idx;
 }
-
+void help()
+{
+    entry_check(61);
+    template_set_G_stat(61,64,"elp");
+    without_arg_check_exec(64);
+}
 void pstart()
 {
     entry_check(11);
@@ -392,7 +427,7 @@ void pstart()
 void pdone()
 {
     entry_check(31);
-    template_set_G_stat(31, 34, "one", 0);
+    template_set_G_stat(31, 34, "one");
     without_arg_check_exec(34);
 }
 
@@ -430,6 +465,8 @@ void add()
     entry_check(24);
     eat_arg(-24);
 }
+
+
 
 void jfree()
 {
