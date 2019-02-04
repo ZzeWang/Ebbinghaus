@@ -17,7 +17,7 @@ char arg[100];
 map<char, int> s1 = {
         {'-', 2},
         {'s', 11},
-        {'a', 24},
+        {'a', 25},
         {'A', 27},
         {'d', 31},
         {'f', 44},
@@ -43,19 +43,35 @@ map<char, int> s3 = {
 };
 
 map<char, int> q3 = {
-        {'+', 24},
+        {'+', 25},
         {'s', 27},
 };
 
 map<char, int> n2 = {
-        {'o', 43},
+        {'o', 44},
         {'e', 49},
 };
 
 map<char, int> n3 = {
-        {'+', 44},
-        {'s', 46},
+        {'+', 46},
+        {'s', 49},
 };
+
+/*
+ *  head : word parse branch node
+ *  nextJump: look up hash table and find word entry
+ *  dispatch: get into entry
+ *  sub-function: check word pattern and collect argement
+ *  ->command enqueue
+ *  ->command enqueue
+ *  ->command enqueue
+ *  ... repeat until no commands
+ *
+ *
+ *
+ *
+ * */
+
 
 void help_msg()
 {
@@ -92,11 +108,11 @@ void nextJump(int stat, char _nex)
         look = s3.find(_nex);
     else if (stat == 2)
         look = s2.find(_nex);
-    else if (stat == 23)
+    else if (stat == 24)
         look = q3.find(_nex);
-    else if (stat == 42)
-        look = n2.find(_nex);
     else if (stat == 43)
+        look = n2.find(_nex);
+    else if (stat == 45)
         look = n3.find(_nex);
     else if (stat == 0)
     {
@@ -125,75 +141,56 @@ void nextJump(int stat, char _nex)
     {
         __G__stat = -3;
         throw_parse_error(__G__stat);
-    } else if (stat == 23 && look == q3.end())
+    } else if (stat == 24 && look == q3.end())
     {
-        __G__stat = -23;
+        __G__stat = -24;
         throw_parse_error(__G__stat);
-    } else if (stat == 42 && look == n2.end())
+    } else if (stat == 43 && look == n2.end())
     {
-        __G__stat = -42;
+        __G__stat = -43;
         throw_parse_error(__G__stat);
     } else if (stat == 43 && look == n3.end())
     {
         __G__stat = -43;
         throw_parse_error(__G__stat);
-    } else
+    }
+    else if (stat == 45 && look == n3.end())
+    {
+        __G__stat = -45;
+        throw_parse_error(__G__stat);
+    }
+    else
     {
         __G__stat = look->second;
     }
 }
-
-inline void set_error_code_print(int code, const char *info, const char *withcmd = nullptr)
+void head()
 {
-    cout << info;
-    if (withcmd)
-        cout << withcmd << endl;
-}
-
-void throw_parse_error(int stat)
-{
-    if (stat == -15)
-        set_error_code_print(-15, "'start' expected not :", cmd);
-    if (stat == -34)
-        set_error_code_print(-34, "'done' expected not :", cmd);
-    if (stat == -1)
-        set_error_code_print(-1, "'-' expected, not :", cmd);
-    if (stat == -2)
-        set_error_code_print(-2, "--pa|d|c|--start|--f..|--a.. expected not :", cmd);
-    if (stat == -3)
-        set_error_code_print(-3, "--pa|pc|pd expected not :", cmd);
-    if (stat == -4)
-        set_error_code_print(-4, "--pd need arg");
-    if (stat == -5)
-        set_error_code_print(-5, "--pc need arg");
-    if (stat == -6)
-        set_error_code_print(-6, "--pd need arg");
-    if (stat == -23)
-        set_error_code_print(-23, "--add expected not :", cmd);
-    if (stat == -24)
-        set_error_code_print(-24, "--add+ need arg");
-    if (stat == -27)
-        set_error_code_print(-27, "--adds need arg");
-    if (stat == -42)
-        set_error_code_print(-42, "--free|fro|fros expected, not :", cmd);
-    if (stat == -43)
-        set_error_code_print(-42, "--fro|fros expected ,not :", cmd);
-    if (stat == -49)
-        set_error_code_print(-49, "--free need arg");
-    if (stat == -50)
-        set_error_code_print(-50, "--free expected ,not :", cmd);
-    if (stat == -44)
-        set_error_code_print(-44, "--frozen need arg");
-    if (stat == -46)
-        set_error_code_print(-46, "--frozen need arg");
-    if (stat == -64)
-        set_error_code_print(-64, "--help expected, not", cmd);
-    if (stat == -71)
-        set_error_code_print(-71, "--remove need arg");
-    if(stat== -76)
-        set_error_code_print(-76, "--remove expected, not", cmd);
-}
-
+    for (char x = getChar();; x = getChar())
+    {
+        if (__G__stat == 0 && x == '-')
+            nextJump(__G__stat, x);
+        else if (__G__stat == 1 && x == '-')
+            nextJump(__G__stat, x);
+        else if (__G__stat == 1 && isalpha(x))
+            nextJump(__G__stat, x);
+        else if (__G__stat == 2 && x != '-')
+            nextJump(__G__stat, x);
+        else if (__G__stat == 3 && x != '-')
+            nextJump(__G__stat, x);
+        else if (__G__stat == 24 && x != '-')
+            nextJump(__G__stat, x);
+        else if (__G__stat == 43 && x != '-')
+            nextJump(__G__stat, x);
+        else if (__G__stat == 45 && x != '-')
+            nextJump(__G__stat, x);
+        else
+        {
+            ungetChar(2);
+            break;
+        }
+    }
+};
 void dispatch()
 {
     switch (__G__stat)
@@ -216,13 +213,13 @@ void dispatch()
         case 41:
             f_head();
             break;
-        case 43:
+        case 44:
             fro_head();
             break;
-        case 44:
+        case 46:
             fro();
             break;
-        case 46:
+        case 48:
             fros();
             break;
         case 49:
@@ -231,7 +228,7 @@ void dispatch()
         case 21:
             add_head();
             break;
-        case 24:
+        case 25:
             add();
             break;
         case 27:
@@ -245,6 +242,64 @@ void dispatch()
             break;
     }
 }
+inline void set_error_code_print(int code, const char *info, const char *withcmd = nullptr)
+{
+    cout << info;
+    if (withcmd)
+        cout << withcmd << endl;
+}
+
+void throw_parse_error(int stat)
+{
+    if (stat == -16)
+        set_error_code_print(-15, "'start' expected not :", cmd);
+    if (stat == -35)
+        set_error_code_print(-34, "'done' expected not :", cmd);
+    if (stat == -1)
+        set_error_code_print(-1, "'-' expected, not :", cmd);
+    if (stat == -2)
+        set_error_code_print(-2, "--pa|d|c|--start|--f..|--a.. expected not :", cmd);
+    if (stat == -3)
+        set_error_code_print(-3, "--pa|pc|pd expected not :", cmd);
+    if (stat == -4)
+        set_error_code_print(-4, "--pd need arg");
+    if (stat == -5)
+        set_error_code_print(-5, "--pc need arg");
+    if (stat == -6)
+        set_error_code_print(-6, "--pd need arg");
+    if (stat == -24)
+        set_error_code_print(-24, "--add.. expected, not :", cmd);
+    if (stat == -25)
+        set_error_code_print(-25, "--add+ need arg");
+    if (stat == -26)
+        set_error_code_print(-26, "--add+ expected, not:", cmd);
+    if (stat == -27)
+        set_error_code_print(-27, "--adds need arg");
+    if (stat == -28)
+        set_error_code_print(-28, "--adds expected, not: ", cmd);
+    if (stat == -43)
+        set_error_code_print(-43, "--free|fro|fros expected, not :", cmd);
+    if (stat == -47)
+        set_error_code_print(-47, "--fro+ expected, not: ", cmd);
+    if (stat == -49)
+        set_error_code_print(-49, "--fros expected, not :", cmd);
+    if (stat == -50)
+        set_error_code_print(-50, "--free expected ,not :", cmd);
+    if (stat == -44)
+        set_error_code_print(-44, "--frozen need arg");
+    if (stat == -45)
+        set_error_code_print(-44, "--fro... expected, not :", cmd);
+    if (stat == -46)
+        set_error_code_print(-46, "--fro+ need arg");
+    if (stat == -64)
+        set_error_code_print(-64, "--help expected, not", cmd);
+    if (stat == -71)
+        set_error_code_print(-71, "--remove need arg");
+    if(stat== -77)
+        set_error_code_print(-77, "--remove expected, not", cmd);
+}
+
+
 
 inline char getChar()
 {
@@ -255,7 +310,8 @@ inline void ungetChar()
 {
     c_idx--;
 }
-
+inline void ungetChar(int m)
+{c_idx-=m;}
 
 Job<> jp("F:\\cppProject\\AAebb\\project");
 Project pjk("F:\\cppProject\\AAebb\\dir", "F:\\cppProject\\AAebb\\project");
@@ -268,11 +324,11 @@ void call(int stat)
         case 64:
             help_msg();
             break;
-        case 15:
+        case 16:
             jp.startup();
             jp.join();
             break;
-        case 34:
+        case 35:
             jp.finishJob();
             jp.put();
             break;
@@ -288,11 +344,11 @@ void call(int stat)
             pjk.deleteProj(arg);
             pjk.put();
             break;
-        case 24:
+        case 26:
             jp.addJob(job_info_table_item(0, string(arg), 0));
             jp.put();
             break;
-        case 27:
+        case 28:
             jp.addJobs(string(arg));
             jp.put();
             break;
@@ -300,14 +356,14 @@ void call(int stat)
             jp.unfreezeJob(string(arg));
             jp.put();
             break;
-        case 44:
+        case 47:
             jp.freezeJob(string(arg));
             jp.put();
             break;
-        case 46:
+        case 49:
             cout << "call job.frozens() with arg=" << arg << endl;
             break;
-        case 76:
+        case 77:
             jp.deleteJobByName(string(arg));
             jp.put();
             break;
@@ -333,33 +389,7 @@ void run()
     }
 }
 
-void head()
-{
-    for (char x = getChar();; x = getChar())
-    {
-        if (__G__stat == 0 && x == '-')
-            nextJump(__G__stat, x);
-        else if (__G__stat == 1 && x == '-')
-            nextJump(__G__stat, x);
-        else if (__G__stat == 1 && isalpha(x))
-            nextJump(__G__stat, x);
-        else if (__G__stat == 2 && x != '-')
-            nextJump(__G__stat, x);
-        else if (__G__stat == 3 && x != '-')
-            nextJump(__G__stat, x);
-        else if (__G__stat == 23 && x != '-')
-            nextJump(__G__stat, x);
-        else if (__G__stat == 42 && x != '-')
-            nextJump(__G__stat, x);
-        else if (__G__stat == 43 && x != '-')
-            nextJump(__G__stat, x);
-        else
-        {
-            ungetChar();
-            break;
-        }
-    }
-};
+
 inline void entry_check(int stat)
 {
     if (__G__stat != stat)
@@ -433,24 +463,24 @@ void help()
 void pstart()
 {
     entry_check(11);
-    template_set_G_stat(11, 15, "tart", 0);
-    without_arg_check_exec(15);
+    template_set_G_stat(11, 16, "start", 0);
+    without_arg_check_exec(16);
 }
 
 void pdone()
 {
     entry_check(31);
-    template_set_G_stat(31, 34, "one");
-    without_arg_check_exec(34);
+    template_set_G_stat(31, 35, "done");
+    without_arg_check_exec(35);
 }
 
 void add_head()
 {
     entry_check(21);
-    template_set_G_stat(21, 23, "dd", 0);
-    if (__G__stat != 23)
+    template_set_G_stat(21, 24, "add", 0);
+    if (__G__stat != 24)
     {
-        __G__stat = -23;
+        __G__stat = -24;
         throw_parse_error(__G__stat);
     }
 }
@@ -458,10 +488,10 @@ void add_head()
 void f_head()
 {
     entry_check(41);
-    template_set_G_stat(41, 42, "r", 0);
-    if (__G__stat != 42)
+    template_set_G_stat(41, 43, "fr", 0);
+    if (__G__stat != 43)
     {
-        __G__stat = -42;
+        __G__stat = -43;
         throw_parse_error(__G__stat);
     }
 
@@ -470,22 +500,34 @@ void f_head()
 void adds()
 {
     entry_check(27);
+    template_set_G_stat(27,28,"s");
+    if (__G__stat != 28)
+    {
+        __G__stat = -28;
+        throw_parse_error(__G__stat);
+    }
     eat_arg(-27);
 }
 
 void add()
 {
-    entry_check(24);
-    eat_arg(-24);
+    entry_check(25);
+    template_set_G_stat(25,26,"+");
+    if (__G__stat != 26)
+    {
+        __G__stat = -26;
+        throw_parse_error(__G__stat);
+    }
+    eat_arg(-25);
 }
 
 void remove()
 {
     entry_check(71);
-    template_set_G_stat(71, 76,"emove");
-    if (__G__stat != 76)
+    template_set_G_stat(71, 77,"remove");
+    if (__G__stat != 77)
     {
-        __G__stat = -76;
+        __G__stat = -77;
         throw_parse_error(__G__stat);
     }
     eat_arg(-71);
@@ -504,21 +546,38 @@ void jfree()
 }
 
 void fro()
-{
-    entry_check(44);
-    eat_arg(-44);
+{ // 46
+    entry_check(46);
+    template_set_G_stat(46,47, "+");
+    if (__G__stat != 47)
+    {
+        __G__stat = -47;
+        throw_parse_error(__G__stat);
+    }
+    eat_arg(-46);
 }
 
 void fros()
 {
-    entry_check(46);
-    eat_arg(-46);
+    entry_check(47);
+    template_set_G_stat(47,49,"os");
+    if (__G__stat != 49)
+    {
+        __G__stat = -49;
+        throw_parse_error(__G__stat);
+    }
+    eat_arg(-47);
 }
 
 void fro_head()
 {
-    entry_check(42);
-    template_set_G_stat(42, 43, "o", 0);
+    entry_check(44);
+    template_set_G_stat(44, 45, "o", 0);
+    if (__G__stat != 45)
+    {
+        __G__stat = -45;
+        throw_parse_error(__G__stat);
+    }
 }
 
 inline void template_p_(int stat)
