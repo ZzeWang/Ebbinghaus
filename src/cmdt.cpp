@@ -49,12 +49,12 @@ map<char, int> q3 = {
 
 map<char, int> n2 = {
         {'o', 44},
-        {'e', 49},
+        {'e', 80},
 };
 
 map<char, int> n3 = {
         {'+', 46},
-        {'s', 49},
+        {'s', 48},
 };
 
 /*
@@ -222,7 +222,7 @@ void dispatch()
         case 48:
             fros();
             break;
-        case 49:
+        case 80:
             jfree();
             break;
         case 21:
@@ -277,6 +277,8 @@ void throw_parse_error(int stat)
         set_error_code_print(-27, "--adds need arg");
     if (stat == -28)
         set_error_code_print(-28, "--adds expected, not: ", cmd);
+    if (stat == -48)
+        set_error_code_print(-28, "--fros need arg");
     if (stat == -43)
         set_error_code_print(-43, "--free|fro|fros expected, not :", cmd);
     if (stat == -47)
@@ -295,8 +297,12 @@ void throw_parse_error(int stat)
         set_error_code_print(-64, "--help expected, not", cmd);
     if (stat == -71)
         set_error_code_print(-71, "--remove need arg");
-    if(stat== -77)
+    if (stat== -77)
         set_error_code_print(-77, "--remove expected, not", cmd);
+    if (stat == -82)
+        set_error_code_print(-77, "--free expected, not", cmd);
+    if (stat == -80)
+        set_error_code_print(-77, "--free need arg");
 }
 
 
@@ -332,15 +338,15 @@ void call(int stat)
             jp.finishJob();
             jp.put();
             break;
-        case 4:
+        case 5:
             pjk.createProj(arg);
             pjk.put();
             break;
-        case 5:
+        case 6:
             pjk.changeProj(arg);
             jp.pre_load();
             break;
-        case 6:
+        case 7:
             pjk.deleteProj(arg);
             pjk.put();
             break;
@@ -352,7 +358,7 @@ void call(int stat)
             jp.addJobs(string(arg));
             jp.put();
             break;
-        case 50:
+        case 82:
             jp.unfreezeJob(string(arg));
             jp.put();
             break;
@@ -535,14 +541,14 @@ void remove()
 
 void jfree()
 {
-    entry_check(49);
-    template_set_G_stat(49, 50, "e", 0);
-    if (__G__stat != 50)
+    entry_check(80);
+    template_set_G_stat(80, 82, "ee");
+    if (__G__stat != 82)
     {
-        __G__stat = -50;
+        __G__stat = -82;
         throw_parse_error(__G__stat);
     }
-    eat_arg(-49);
+    eat_arg(-80);
 }
 
 void fro()
@@ -559,14 +565,14 @@ void fro()
 
 void fros()
 {
-    entry_check(47);
-    template_set_G_stat(47,49,"os");
+    entry_check(48);
+    template_set_G_stat(48,49,"s");
     if (__G__stat != 49)
     {
         __G__stat = -49;
         throw_parse_error(__G__stat);
     }
-    eat_arg(-47);
+    eat_arg(-48);
 }
 
 void fro_head()
@@ -580,25 +586,47 @@ void fro_head()
     }
 }
 
-inline void template_p_(int stat)
+inline void template_p_(int stat, const char* pat)
 {
     entry_check(stat);
+    template_set_G_stat(stat, stat+1, pat);
     eat_arg(-stat);
 }
 
 void pc()
 {
-    template_p_(5);
+    entry_check(5);
+    template_set_G_stat(5, 6, "c");
+    if (__G__stat != 6)
+    {
+        __G__stat = -6;
+        throw_parse_error(__G__stat);
+    }
+    eat_arg(-5);
 }
 
 void pa()
 {
-    template_p_(4);
+    entry_check(4);
+    template_set_G_stat(4, 5, "a");
+    if (__G__stat != 5)
+    {
+        __G__stat = -5;
+        throw_parse_error(__G__stat);
+    }
+    eat_arg(-4);
 }
 
 void pd()
 {
-    template_p_(6);
+    entry_check(6);
+    template_set_G_stat(6, 7, "d");
+    if (__G__stat != 7)
+    {
+        __G__stat = -7;
+        throw_parse_error(__G__stat);
+    }
+    eat_arg(-6);
 }
 
 
