@@ -30,13 +30,9 @@ public:
 
     // stat : status for a job, 0 unfrozen 1 frozen 2 beingCreated 3 normal
     job_table_item(const job_table_item &other) = default;
-
     job_table_item(int _id, int _cd, int et, int st) : job_id(_id), c_down(_cd), exec_times(et), stat(st) {};
-
     job_table_item &operator=(const job_table_item &other) = default;
-
     inline void clear() { job_id = 0, c_down = 0, exec_times = 0, stat = 0; };
-
     inline string format() const
     {
         return std::to_string(job_id) + "," + std::to_string(c_down) + "," + std::to_string(exec_times) + "," +
@@ -78,51 +74,27 @@ private:
     list<job_table_item> zero_table;
     list<job_table_item> frozen_table;
     IO io_buf;
-
-
     void __syn(const list<job_table_item> &_T, list<job_table_item> &_M);
 
 public:
     explicit
-    Job(const string &project) : io_buf(project), job_table(), job_info_table(), zero_table()
-    {
-        pre_load();  //make sure that project is the default project.
-    };
-
+    Job(const string &project) : io_buf(project), job_table(), job_info_table(), zero_table(){pre_load();};//make sure that project is the default project.
     void pre_load();
-
-    void look();
-
     int generate_cdown(int);
-
     void addJob(const T);
-
     void addJobs();
-
     void addJobs(const string &_p);
-
     void load_job_table_for(list<job_table_item> &which, const string &path);
-
     void deleteJob(const T &it);
-
     void deleteJobById(const int it);
-
     void deleteJobByName(const string &);
-
     void freezeJobs();
-
     void freezeJob(const string &name);
-
     void freezeJob(const job_table_item it);
-
     void unfreezeJob(const T it);
-
     void unfreezeJob(const string &name);
-
     void startup();
-
     void finishJob();
-
     static int analyze(int input_stp, int stat)
     {
         msg_job_name = dpe.pjt_name;
@@ -157,13 +129,9 @@ public:
         }
         return -1;
     }
-
     void join();// join job_table and job_info_table using job_id;
-
     void put();
-
     virtual void get();
-
     inline void syn_zero_job_table() { __syn(zero_table, job_table); };
 };
 
