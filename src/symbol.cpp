@@ -3,7 +3,7 @@
 //
 #include <cstdio>
 #include <string>
-#include "..\head\symbol.h"
+#include "..\include\symbol.h"
 
 using namespace std;
 

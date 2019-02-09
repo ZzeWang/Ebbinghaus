@@ -1,8 +1,8 @@
 //
 // Created by 39389_000 on 2019/1/25.
 //
-#include "..\head\Project.h"
-#include "..\head\symbol.h"
+#include "..\include\Project.h"
+#include "..\include\symbol.h"
 
 #include <direct.h>
 #include <fstream>

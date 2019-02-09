@@ -1,6 +1,6 @@
 #include <cstring>
 #include <iostream>
-#include "..\head\cmdt.h"
+#include "..\include\cmdt.h"
 using namespace std;
 
 extern int __G__stat;

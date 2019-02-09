@@ -2,8 +2,8 @@
 // Created by 39389_000 on 2019/1/24.
 //
 
-#include "../head/Project.h"
-#include "../head/symbol.h"
+#include "../include/Project.h"
+#include "../include/symbol.h"
 #include <fstream>
 
 using std::string;

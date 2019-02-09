@@ -2,8 +2,8 @@
 #include <queue>
 #include <iostream>
 #include <cstring>
-#include "../head/Job.h"
-#include "../head/cmdt.h"
+#include "../include/Job.h"
+#include "../include/cmdt.h"
 
 using namespace std;
 
@@ -58,7 +58,7 @@ map<char, int> n3 = {
 };
 
 /*
- *  head : word parse branch node
+ *  include : word parse branch node
  *  nextJump: look up hash table and find word entry
  *  dispatch: get into entry
  *  sub-function: check word pattern and collect argement
@@ -305,8 +305,6 @@ void throw_parse_error(int stat)
         set_error_code_print(-77, "--free need arg");
 }
 
-
-
 inline char getChar()
 {
     return cmd[c_idx++];
@@ -327,7 +325,7 @@ void call(int stat)
 
     switch (stat)
     {
-        case 64:
+        case 65:
             help_msg();
             break;
         case 16:
@@ -394,7 +392,6 @@ void run()
         call(x.first);
     }
 }
-
 
 inline void entry_check(int stat)
 {
@@ -463,8 +460,8 @@ inline int eat_arg(int error_code)
 void help()
 {
     entry_check(61);
-    template_set_G_stat(61,64,"elp");
-    without_arg_check_exec(64);
+    template_set_G_stat(61,65,"help");
+    without_arg_check_exec(65);
 }
 void pstart()
 {
