@@ -47,28 +47,23 @@ public:
 struct job_info_table_item_base
 {
     int job_id;
-    string word; //others
-    int status; //others
-public:
+    int status;
+public :
+    job_info_table_item_base(const int id, const int stat) : job_id(id), status(stat) {};
+    virtual bool operator==(const job_info_table_item_base &other){return job_id == other.job_id;}
+    virtual string format(){return std::to_string(job_id) + "," + std::to_string(status) + "\n";}
+    virtual ~job_info_table_item_base() {};
 };
 
 struct job_info_table_item : public job_info_table_item_base
 {
+    string word;
 public:
-    job_info_table_item(const int &_j, const string &_w, const int &_s) : job_info_table_item_base{_j, _w, _s} {};
-
-    inline string format() const
-    {
-        // 9,sore,0,0
-        return std::to_string(job_id) + "," + word + "," + std::to_string(status) + "\n";
-    }
-
-    // see() function tells addJob() function how to identity two job_info items.
-    static inline bool see(const job_info_table_item &t, const job_info_table_item &q) { return t.word == q.word; };
-
-    static inline bool see(const job_info_table_item &t, const string &name) { return t.word == name; };
-
-    static inline bool see(const job_info_table_item &t, const int &id) { return t.job_id == id; };
+    job_info_table_item(const int &_j, const string &_w, const int &_s) : job_info_table_item_base{_j, _s}, word(_w) {};
+    virtual string format() const final { return std::to_string(job_id) + "," + word + "," + std::to_string(status) + "\n"; }
+    virtual bool operator==(const job_info_table_item &other) const final { return word == other.word; };
+    virtual bool operator==(const int other) const final { return job_id == other; };
+    virtual bool operator==(const string& other) const final { return word == other; };
 };
 
 
@@ -92,7 +87,6 @@ public:
     Job(const string &project) : io_buf(project), job_table(), job_info_table(), zero_table()
     {
         pre_load();  //make sure that project is the default project.
-        // load necessary tables into mem
     };
 
     void pre_load();
@@ -109,7 +103,7 @@ public:
 
     void load_job_table_for(list<job_table_item> &which, const string &path);
 
-    void deleteJob(const T it);
+    void deleteJob(const T &it);
 
     void deleteJobById(const int it);
 
@@ -168,7 +162,7 @@ public:
 
     void put();
 
-    void get();
+    virtual void get();
 
     inline void syn_zero_job_table() { __syn(zero_table, job_table); };
 };
@@ -216,7 +210,7 @@ template<class T>
 void Job<T>::unfreezeJob(const string &name)
 {
     auto it = std::find_if(job_info_table.begin(), job_info_table.end(),
-                           [&name](const job_info_table_item &x) { return x.word == name; });
+                           [&name](const T &x) { return x == name; });
     if (it == job_info_table.end())
         unfreezeError();
     else
@@ -252,7 +246,7 @@ void Job<T>::freezeJob(const string &name)
 {
     msg_box = "in freeze job.";
     auto it = std::find_if(job_info_table.begin(), job_info_table.end(),
-                           [&name](const job_info_table_item &x) { return x.word == name; });
+                           [&name](const T &x) { return x == name; });
 
     if (it != job_info_table.end())
     {
@@ -344,15 +338,6 @@ void Job<T>::finishJob()
     synSuccess();
 }
 
-
-template<class T>
-void Job<T>::look()
-{
-    std::for_each(job_info_table.begin(), job_info_table.end(),
-                  [](const T &x) -> void { cout << x.job_id << " " << x.word << endl; });
-}
-
-
 template<class T>
 void Job<T>::addJobs(const string &_p)
 {
@@ -363,11 +348,11 @@ void Job<T>::addJobs(const string &_p)
             continue;
         else
         {
-            mul_add_table.emplace_back(0, _p.substr(per, suf - per), 0);
+            mul_add_table.push_back(T(0, _p.substr(per, suf - per), 0));
             per = suf + 1;
         }
     }
-    mul_add_table.emplace_back(0, _p.substr(per, suf - per), 0);
+    mul_add_table.push_back(T(0, _p.substr(per, suf - per), 0));
     addJobs();
 }
 
@@ -384,13 +369,13 @@ void Job<T>::addJob(const T it)
     msg_job_name = std::to_string(it.job_id);
     msg_box = "in adding job.";
     auto res = std::find_if(job_info_table.begin(), job_info_table.end(),
-                            [&](const T &x) -> bool { return T::see(x, it); });
+                            [&](const T &x) -> bool { return x==it; });
     if (res == job_info_table.end())
     {
         dpe.add_id();
         io_buf.set_block_board();
         job_table.emplace_back(dpe.cnt, 0, 0, 2);// stat = 2
-        job_info_table.emplace_back(dpe.cnt, it.word, it.status);
+        job_info_table.push_back(T(dpe.cnt, it.word, it.status));
         jobAddSuccess();
     } else
     {
@@ -406,7 +391,7 @@ void Job<T>::deleteJobById(const int it)
     msg_job_name = std::to_string(it);
     msg_box = "in delete job by id.";
     auto size = job_table.size();
-    job_info_table.remove_if([&it](const T &item) -> bool { return T::see(item, it); });
+    job_info_table.remove_if([&it](const T &item) -> bool { return item==it; });
     job_table.remove_if([&it](job_table_item &item) { return it == item.job_id; });
     if (size - job_table.size() != 0)
     {
@@ -418,12 +403,12 @@ void Job<T>::deleteJobById(const int it)
 }
 
 template<class T>
-void Job<T>::deleteJob(const T it)
+void Job<T>::deleteJob(const T& it)
 {
     msg_job_name = std::to_string(it.job_id);
     msg_box = "in delete job.";
     auto size = job_table.size();
-    job_info_table.remove_if([&it](const T &item) { return T::see(it, item); });
+    job_info_table.remove_if([&it](const T &item) { return item==it; });
     job_table.remove_if([&it](job_table_item &item) { return it.job_id == item.job_id; });
     if (size - job_table.size() != 0)
     {
@@ -453,9 +438,9 @@ void Job<T>::deleteJobByName(const string &name)
         deleteJobById(atoi(name.c_str()));
         return;
     }
-    auto res = std::find_if(job_info_table.begin(), job_info_table.end(), [&name](const job_info_table_item &x)
+    auto res = std::find_if(job_info_table.begin(), job_info_table.end(), [&name](const T &x)
     {
-        return T::see(x, name);
+        return x==name;
     });
     if (res != job_info_table.end())
         deleteJob(*res);
