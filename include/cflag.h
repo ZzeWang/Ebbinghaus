@@ -11,6 +11,11 @@
 #include <map>
 #include <queue>
 
+void run(const std::string&);
+void init_cmds();
+void call(int );
+
+
 extern std::map<char, int> eat_para;
 
 struct __cmd

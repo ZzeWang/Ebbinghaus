@@ -213,8 +213,9 @@ template<class T>
 void Job<T>::freezeJob(const string &name)
 {
     msg_box = "in freeze job.";
+
     auto it = std::find_if(job_info_table.begin(), job_info_table.end(),
-                           [&name](const T &x) { return x == name; });
+                           [&name](const T &x) {return x == name; });
 
     if (it != job_info_table.end())
     {
@@ -234,6 +235,7 @@ template<class T>
 void Job<T>::freezeJob(const job_table_item it)
 {
     msg_box = "in freeze job.";
+
     auto res_in = std::find_if(zero_table.begin(), zero_table.end(),
                                [&it](job_table_item &x) { return x.job_id == it.job_id; });
 
@@ -251,10 +253,8 @@ void Job<T>::freezeJob(const job_table_item it)
                         [tmp_cpy](const job_table_item &x) { return x.job_id == tmp_cpy.job_id; }, tmp_cpy);
         freezeSuc();
     } else
-    {
-        freezeError();
         jobDoesNotExist();
-    }
+
 };
 
 template<class T>

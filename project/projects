@@ -1,4 +1,6 @@
-boot::0,F:\cppProject\AAebb\dir\boot,0,1
+boot::0,F:\cppProject\AAebb\dir\boot,22,2
 word::0,F:\cppProject\AAebb\dir\word,15,1
-test::1,F:\cppProject\AAebb\dir\test,1,2
+thread::2,F:\cppProject\AAebb\dir\thread,0,0
+test::2,F:\cppProject\AAebb\dir\test,1,2
+aaa::3,F:\cppProject\AAebb\dir\aaa,0,0
 e

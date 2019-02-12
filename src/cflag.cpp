@@ -6,7 +6,7 @@
 
 #include <algorithm>
 #include <iostream>
-#include "..\include\flag.h"
+#include "..\include\cflag.h"
 
 // 从a-z的全域映射,还需要添加A-Z的
 std::map<char, int> eat_para
