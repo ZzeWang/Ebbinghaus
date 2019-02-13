@@ -301,13 +301,17 @@ void Cflag::throw_error_info()
 {
     std::vector<std::string> tmp;
     std::string suffix ;
-    int idx = 0;
+    int idx = 0, _cnt=0;
     for(char& x: e_path)
     {
         if (x!='-')
             suffix+=x;
+        else
+            _cnt++;
         idx = jmp[idx][x];
     }
+
+
 
     int x = -1; // for rec
 
@@ -316,6 +320,18 @@ void Cflag::throw_error_info()
 
     std::cout << "You have inputted wrong command" << "\n";
     std::cout << "The most likely commands are followed:" << "\n";
+
+    if (_cnt == 1) // wrong short command
+    {
+        auto go = ++(jmp[1].begin());
+        while (go!=jmp[1].end())
+        {
+            std::cout<<"\"" << go->first << "\""<<std::endl;
+            go++;
+        }
+        return;
+    }
+
     f(idx, tmp, x);
     std::for_each(tmp.begin(),tmp.end(),[&suffix](std::string &x){if(!x.empty()) x = suffix+x;});
     std::for_each(tmp.begin(),tmp.end(),[&suffix](std::string &x){if(!x.empty())  std::cout<<"\"" << x << "\""<<std::endl;});

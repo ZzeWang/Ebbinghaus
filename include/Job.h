@@ -247,7 +247,7 @@ void Job<T>::freezeJob(const job_table_item it)
 
         job_table_item tmp_cpy = *res_in;
         // remove the frozen job from zero table
-        zero_table.remove_if([res_in](job_table_item &x) { return x.job_id == (*res_in).job_id; });
+        zero_table.remove_if([res_in](const job_table_item &x) { return x.job_id == (*res_in).job_id; });
 
         std::replace_if(job_table.begin(), job_table.end(),
                         [tmp_cpy](const job_table_item &x) { return x.job_id == tmp_cpy.job_id; }, tmp_cpy);

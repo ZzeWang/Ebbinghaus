@@ -49,7 +49,10 @@ void call(int stat)
 
     switch (stat)
     {
-        case 65:
+        case 1:
+            jp.join();
+            break;
+        case 2:
             help_msg();
             break;
         case 16:
@@ -105,6 +108,10 @@ static size_t see(const __cmd_compose& cmd)
         return 16;
     if (cmd._long_name.name ==  "done" || cmd._short_name.name =="D")
         return 35;
+    if (cmd._long_name.name == "help")
+        return 2;
+    if (cmd._long_name.name == "look")
+        return 1;
     if (cmd._long_name.name ==  "pa")
         return 5;
     if (cmd._long_name.name ==  "pc")
@@ -138,6 +145,8 @@ void init_cmds()
     cflag.push("add", "a", true);
     cflag.push("muladd", "A", true);
     cflag.push("remove", "r", true);
+    cflag.push("look", "l", false);
+    cflag.push("help", "h", false);
 }
 
 void run(const string& cmd)

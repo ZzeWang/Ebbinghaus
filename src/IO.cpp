@@ -23,7 +23,7 @@ void IO::set_block_board()
     wout.clear();
 
     msg_io_path = dpe.format();
-    bbUpdate();
+    // bbUpdate();
 }
 void IO::read_block_board()
 {
