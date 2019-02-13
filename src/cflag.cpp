@@ -139,6 +139,8 @@ bool Cflag::is_valid(const std::string &cmd)
             e_path.push_back(cmd[_i]);
             last_idx = idx;
             idx = jmp[idx][cmd[_i++]];
+            if (idx == 0)
+                e_path.clear();
         }
         else
             return false;
@@ -154,7 +156,10 @@ bool Cflag::is_valid(const std::string &cmd)
                 return false;
             }
             else if (cmd[_i] == '-')
+            {
                 idx = 0;
+                e_path.clear();
+            }
             else
                 break;
         }
