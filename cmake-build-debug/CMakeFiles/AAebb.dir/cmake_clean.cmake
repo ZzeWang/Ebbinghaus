@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/AAebb.dir/src/Project.cpp.obj"
   "CMakeFiles/AAebb.dir/src/symbol.cpp.obj"
   "CMakeFiles/AAebb.dir/src/cmdt.cpp.obj"
+  "CMakeFiles/AAebb.dir/src/cflag.cpp.obj"
   "AAebb.pdb"
   "AAebb.exe"
   "AAebb.exe.manifest"

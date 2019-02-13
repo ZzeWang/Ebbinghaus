@@ -88,6 +88,9 @@
 		<Unit filename="F:/cppProject/AAebb/src/Project.cpp">
 			<Option target="AAebb"/>
 		</Unit>
+		<Unit filename="F:/cppProject/AAebb/src/cflag.cpp">
+			<Option target="AAebb"/>
+		</Unit>
 		<Unit filename="F:/cppProject/AAebb/src/cmdt.cpp">
 			<Option target="AAebb"/>
 		</Unit>

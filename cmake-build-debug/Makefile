@@ -176,6 +176,33 @@ src/Project.cpp.s:
 	$(MAKE) -f CMakeFiles\AAebb.dir\build.make CMakeFiles/AAebb.dir/src/Project.cpp.s
 .PHONY : src/Project.cpp.s
 
+src/cflag.obj: src/cflag.cpp.obj
+
+.PHONY : src/cflag.obj
+
+# target to build an object file
+src/cflag.cpp.obj:
+	$(MAKE) -f CMakeFiles\AAebb.dir\build.make CMakeFiles/AAebb.dir/src/cflag.cpp.obj
+.PHONY : src/cflag.cpp.obj
+
+src/cflag.i: src/cflag.cpp.i
+
+.PHONY : src/cflag.i
+
+# target to preprocess a source file
+src/cflag.cpp.i:
+	$(MAKE) -f CMakeFiles\AAebb.dir\build.make CMakeFiles/AAebb.dir/src/cflag.cpp.i
+.PHONY : src/cflag.cpp.i
+
+src/cflag.s: src/cflag.cpp.s
+
+.PHONY : src/cflag.s
+
+# target to generate assembly for a file
+src/cflag.cpp.s:
+	$(MAKE) -f CMakeFiles\AAebb.dir\build.make CMakeFiles/AAebb.dir/src/cflag.cpp.s
+.PHONY : src/cflag.cpp.s
+
 src/cmdt.obj: src/cmdt.cpp.obj
 
 .PHONY : src/cmdt.obj
@@ -272,6 +299,9 @@ help:
 	@echo ... src/Project.obj
 	@echo ... src/Project.i
 	@echo ... src/Project.s
+	@echo ... src/cflag.obj
+	@echo ... src/cflag.i
+	@echo ... src/cflag.s
 	@echo ... src/cmdt.obj
 	@echo ... src/cmdt.i
 	@echo ... src/cmdt.s

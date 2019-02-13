@@ -12,22 +12,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a732b25-521e-4edf-afed-936c49c87a51" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/go.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/go.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/AAebb/v15/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/AAebb/v15/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/AAebb/v15/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/AAebb/v15/Browse.VC.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/AAebb/v15/ipch/AutoPCH/baa5336b7abca2c1/CMDT.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/AAebb/v15/ipch/AutoPCH/baa5336b7abca2c1/CMDT.ipch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/AAebb/v15/ipch/AutoPCH/c26b592fc6184ca4/MAIN.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/AAebb/v15/ipch/AutoPCH/c26b592fc6184ca4/MAIN.ipch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/AAebb.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/AAebb.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/AAebb.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/AAebb.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdCXX/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdCXX/a.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AAebb.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AAebb.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AAebb.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AAebb.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AAebb.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AAebb.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AAebb.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AAebb.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AAebb.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AAebb.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AAebb.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AAebb.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AAebb.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AAebb.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AAebb.dir/src/cmdt.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AAebb.dir/objects1.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AAebb.dir/objects1.rsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AAebb.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AAebb.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AAebb.dir/src/IO.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AAebb.dir/src/IO.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AAebb.dir/src/Project.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AAebb.dir/src/Project.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AAebb.dir/src/Project.cpp.obj-5a3c2208" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AAebb.dir/src/cmdt.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AAebb.dir/src/cmdt.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AAebb.dir/src/cmdt.cpp.obj-6fdc8978" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AAebb.dir/src/cmdt.cpp.obj-9395dff4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AAebb.dir/src/cmdt.cpp.obj-b8848362" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AAebb.dir/src/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AAebb.dir/src/main.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dir/word/jobTable" beforeDir="false" afterPath="$PROJECT_DIR$/dir/word/jobTable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dir/word/jobTable_info" beforeDir="false" afterPath="$PROJECT_DIR$/dir/word/jobTable_info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dir/word/lookTable" beforeDir="false" afterPath="$PROJECT_DIR$/dir/word/lookTable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/head/Job.h" beforeDir="false" afterPath="$PROJECT_DIR$/head/Job.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/head/cmdt.h" beforeDir="false" afterPath="$PROJECT_DIR$/head/cmdt.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/bb" beforeDir="false" afterPath="$PROJECT_DIR$/project/bb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/config" beforeDir="false" afterPath="$PROJECT_DIR$/project/config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/projects" beforeDir="false" afterPath="$PROJECT_DIR$/project/projects" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cmdt.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/cmdt.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,46 +73,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cmdt.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="78" column="68" selection-start-line="78" selection-start-column="68" selection-end-line="78" selection-end-column="68" />
+            <state relative-caret-position="224">
+              <caret line="46" column="19" lean-forward="true" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="19" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
-                <element signature="e#828#2221#0" expanded="true" />
-                <element signature="e#2388#3825#0" expanded="true" />
-                <element signature="e#3827#4612#0" expanded="true" />
-                <element signature="e#4614#4664#0" expanded="true" />
-                <element signature="e#4831#5879#0" expanded="true" />
-                <element signature="e#5881#6165#0" expanded="true" />
-                <element signature="e#6167#6956#0" expanded="true" />
-                <element signature="e#6980#7112#0" expanded="true" />
-                <element signature="e#7093#7464#0" expanded="true" />
-                <element signature="e#7466#7752#0" expanded="true" />
-                <element signature="e#7754#8031#0" expanded="true" />
-                <element signature="e#8033#8305#0" expanded="true" />
-                <element signature="e#8418#8438#0" expanded="true" />
-                <element signature="e#8959#9012#0" expanded="true" />
-                <element signature="e#10480#10523#0" expanded="true" />
-                <element signature="e#9014#9210#0" expanded="true" />
-                <element signature="e#9323#9404#0" expanded="true" />
-                <element signature="e#9406#9486#0" expanded="true" />
-                <element signature="e#9488#9521#0" expanded="true" />
-                <element signature="e#9523#9556#0" expanded="true" />
-                <element signature="e#9558#9591#0" expanded="true" />
-                <marker date="1549212084963" expanded="true" signature="2034:2352" ph="..." />
-                <marker date="1549212084963" expanded="true" signature="6366:7499" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/symbol.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-              <folding>
-                <element signature="e#44#61#0" expanded="true" />
-                <element signature="e#962#1027#0" expanded="true" />
+                <element signature="e#12075#12182#0" expanded="true" />
+                <marker date="1549987857960" expanded="true" signature="1513:2646" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -104,78 +87,53 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+            <state relative-caret-position="450">
+              <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#193#517#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/head/Job.h">
+        <entry file="file://$PROJECT_DIR$/include/cflag.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
-              <caret line="589" column="16" lean-forward="true" selection-start-line="589" selection-start-column="16" selection-end-line="589" selection-end-column="16" />
+            <state relative-caret-position="350">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+              <folding>
+                <element signature="e#101#118#0" expanded="true" />
+                <element signature="e#508#722#0" expanded="true" />
+                <element signature="e#775#946#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/Job.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-244">
+              <caret line="213" selection-start-line="213" selection-end-line="213" />
               <folding>
                 <element signature="e#44#59#0" expanded="true" />
                 <element signature="e#162#182#0" expanded="true" />
-                <element signature="e#2019#2245#0" expanded="true" />
-                <element signature="e#4353#4653#0" expanded="true" />
-                <element signature="e#7226#8021#0" expanded="true" />
-                <element signature="e#8711#8906#0" expanded="true" />
-                <element signature="e#8909#9304#0" expanded="true" />
-                <element signature="e#9305#9471#0" expanded="true" />
-                <element signature="e#9473#10150#0" expanded="true" />
-                <element signature="e#10152#10637#0" expanded="true" />
-                <element signature="e#10639#11125#0" expanded="true" />
-                <element signature="e#11405#11432#0" expanded="true" />
-                <element signature="e#11171#11242#0" expanded="true" />
-                <element signature="e#11730#13863#0" expanded="true" />
-                <element signature="e#14482#14641#0" expanded="true" />
-                <element signature="e#14643#16183#0" expanded="true" />
-                <marker date="1549211814815" expanded="true" signature="414:1959" ph="..." />
+                <element signature="e#2127#2176#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dir/test/jobTable_info">
+        <entry file="file://$PROJECT_DIR$/src/cflag.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dir/test/jobTable">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/head/cmdt.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="21" column="19" lean-forward="true" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+            <state relative-caret-position="-1202">
+              <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
               <folding>
                 <element signature="e#0#2#0" expanded="true" />
+                <element signature="e#49#69#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -184,36 +142,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>without_arg_check_exec</find>
-      <find>with_arg_check_exec</find>
-      <find>with</find>
-      <find>ru</find>
-      <find>thr</find>
-      <find>__error_code</find>
-      <find>in</find>
-      <find>in load</find>
-      <find>sys</find>
-      <find>exec_a</find>
-      <find>delete</find>
+      <find>unge</find>
+      <find>23</find>
+      <find>24</find>
+      <find>25</find>
+      <find>-25</find>
+      <find>-26</find>
+      <find>26</find>
       <find>add</find>
-      <find>exec_queue</find>
-      <find>ree</find>
-      <find>unf</find>
-      <find>bb</find>
-      <find>---</find>
-      <find>put</find>
-      <find>dpe</find>
-      <find>15</find>
-      <find>34</find>
-      <find>pd</find>
-      <find>pdo</find>
-      <find>50</find>
-      <find>run</find>
-      <find>job_info</find>
-      <find>ca</find>
+      <find>adds</find>
+      <find>27</find>
+      <find>76</find>
+      <find>42</find>
+      <find>43</find>
+      <find>disp</find>
+      <find>n2</find>
+      <find>-45</find>
+      <find>head</find>
+      <find>fros</find>
+      <find>-4</find>
+      <find>fro</find>
+      <find>n3</find>
+      <find>fro()</find>
+      <find>fros()</find>
+      <find>thr</find>
       <find>call</find>
+      <find>65</find>
+      <find>-16</find>
       <find>see</find>
-      <find>help_m</find>
+      <find>job_info_table_item</find>
+      <find>deleteJob</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -248,28 +206,34 @@
         <option value="$PROJECT_DIR$/dir/Word/jobTable" />
         <option value="$PROJECT_DIR$/project/projects" />
         <option value="$PROJECT_DIR$/project/config" />
-        <option value="$PROJECT_DIR$/project/bb" />
         <option value="$PROJECT_DIR$/Project.cpp" />
         <option value="$PROJECT_DIR$/Job.h" />
         <option value="$PROJECT_DIR$/cmdt.cpp" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/head/symbol.h" />
-        <option value="$PROJECT_DIR$/src/symbol.cpp" />
+        <option value="$PROJECT_DIR$/head/Job.h" />
+        <option value="$PROJECT_DIR$/head/cmdt.h" />
         <option value="$PROJECT_DIR$/src/IO.cpp" />
         <option value="$PROJECT_DIR$/src/Project.cpp" />
+        <option value="$PROJECT_DIR$/src/symbol.cpp" />
+        <option value="$PROJECT_DIR$/cmdline/test.cpp" />
+        <option value="$PROJECT_DIR$/project/bb" />
+        <option value="$PROJECT_DIR$/src/cmds.cpp" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/readme.md" />
+        <option value="$PROJECT_DIR$/src/cflag.cpp" />
+        <option value="$PROJECT_DIR$/include/Job.h" />
+        <option value="$PROJECT_DIR$/include/cmdt.h" />
+        <option value="$PROJECT_DIR$/include/cflag.h" />
         <option value="$PROJECT_DIR$/src/main.cpp" />
-        <option value="$PROJECT_DIR$/head/cmdt.h" />
-        <option value="$PROJECT_DIR$/head/Job.h" />
         <option value="$PROJECT_DIR$/src/cmdt.cpp" />
       </list>
     </option>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="110" />
-    <option name="y" value="73" />
-    <option name="width" value="1714" />
-    <option name="height" value="1033" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="46" />
+    <option name="width" value="1874" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -298,6 +262,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -313,19 +278,7 @@
             <path>
               <item name="AAebb" type="b2602c69:ProjectViewProjectNode" />
               <item name="AAebb" type="462c0819:PsiDirectoryNode" />
-              <item name="dir" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AAebb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AAebb" type="462c0819:PsiDirectoryNode" />
-              <item name="dir" type="462c0819:PsiDirectoryNode" />
-              <item name="word" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AAebb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AAebb" type="462c0819:PsiDirectoryNode" />
-              <item name="head" type="462c0819:PsiDirectoryNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AAebb" type="b2602c69:ProjectViewProjectNode" />
@@ -340,18 +293,23 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="generate_&#9;null&#9;null&#10;load_job_table_for&#9;null&#9;null&#10;pjk_read_pjks&#9;null&#9;null&#10;read_b&#9;null&#9;null&#10;set_&#9;null&#9;null&#10;stat&#9;null&#9;null&#10;load_job_table&#9;null&#9;null&#10;job_read&#9;null&#9;null&#10;format&#9;null&#9;null" />
+    <property name="ToolWindowVersion Control.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="CPPToolchains" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\cppProject\AAebb\include" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\cppProject\AAebb\src" />
+      <recent name="F:\cppProject\AAebb\include" />
       <recent name="F:\cppProject\AAebb\head" />
       <recent name="F:\cppProject\AAebb\project" />
     </key>
@@ -369,7 +327,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.AAebb">
-    <configuration name="AAebb" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-a what --remove what" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AAebb" TARGET_NAME="AAebb" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AAebb" RUN_TARGET_NAME="AAebb">
+    <configuration name="AAebb" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-r wang -a wang -s -D -f wang" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AAebb" TARGET_NAME="AAebb" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AAebb" RUN_TARGET_NAME="AAebb">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -415,12 +373,21 @@
       <workItem from="1549039044792" duration="407000" />
       <workItem from="1549082539923" duration="9016000" />
       <workItem from="1549100904929" duration="749000" />
-      <workItem from="1549199979579" duration="12084000" />
+      <workItem from="1549199979579" duration="13192000" />
+      <workItem from="1549258944680" duration="10321000" />
+      <workItem from="1549270363983" duration="758000" />
+      <workItem from="1549293067329" duration="799000" />
+      <workItem from="1549294875364" duration="2079000" />
+      <workItem from="1549297100960" duration="2599000" />
+      <workItem from="1549729812582" duration="3820000" />
+      <workItem from="1549797441030" duration="2491000" />
+      <workItem from="1549815873131" duration="809000" />
+      <workItem from="1549982289631" duration="5186000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="256458000" />
+    <option name="totallyTimeSpent" value="286428000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -432,24 +399,24 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <frame x="46" y="0" width="1874" height="1040" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" weight="0.12686567" />
-      <window_info id="Structure" order="2" weight="0.24890591" />
-      <window_info id="Debug" order="3" visible="true" weight="0.20095949" />
-      <window_info anchor="bottom" id="Messages" order="0" weight="0.44038668" />
-      <window_info anchor="bottom" id="CMake" order="1" weight="0.40197152" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.21223815" />
+      <window_info id="Structure" order="2" weight="0.24880382" />
+      <window_info id="Debug" order="3" weight="0.27783903" />
+      <window_info anchor="bottom" id="Messages" order="0" visible="true" weight="0.032292787" />
+      <window_info anchor="bottom" id="CMake" order="1" weight="0.40064448" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="3" weight="0.32968238" />
+      <window_info anchor="bottom" id="Version Control" order="3" weight="0.32914925" />
       <window_info anchor="bottom" id="Message" order="4" />
-      <window_info anchor="bottom" id="Find" order="5" weight="0.5290252" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.21804512" />
+      <window_info anchor="bottom" id="Find" order="5" weight="0.51776105" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.032292787" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="9" weight="0.32858709" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32092005" />
+      <window_info anchor="bottom" id="TODO" order="9" weight="0.32775453" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.032292787" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Thumbnails" order="12" weight="0.32968238" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -481,16 +448,25 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.md" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/cmdline" />
+      <path value="$PROJECT_DIR$/cmdline/cmdline" />
+    </ignored-roots>
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/head/Job.h</url>
+          <url>file://$PROJECT_DIR$/include/Job.h</url>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/head/Job.h</url>
-          <line>208</line>
+          <url>file://$PROJECT_DIR$/include/Job.h</url>
+          <line>170</line>
           <option name="timeStamp" value="148" />
         </line-breakpoint>
         <line-breakpoint type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
@@ -514,108 +490,83 @@
           <option name="timeStamp" value="169" />
         </line-breakpoint>
         <line-breakpoint type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/src/cmdt.cpp</url>
-          <line>423</line>
-          <option name="timeStamp" value="179" />
-        </line-breakpoint>
-        <line-breakpoint type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/src/cmdt.cpp</url>
-          <line>337</line>
-          <option name="timeStamp" value="180" />
-        </line-breakpoint>
-        <line-breakpoint type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/src/cmdt.cpp</url>
-          <line>461</line>
-          <option name="timeStamp" value="181" />
-        </line-breakpoint>
-        <line-breakpoint type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/src/cmdt.cpp</url>
-          <line>351</line>
-          <option name="timeStamp" value="185" />
-        </line-breakpoint>
-        <line-breakpoint type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/src/cmdt.cpp</url>
-          <line>353</line>
-          <option name="timeStamp" value="186" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/head/Job.h</url>
-          <line>143</line>
+          <url>file://$PROJECT_DIR$/include/Job.h</url>
+          <line>109</line>
           <option name="timeStamp" value="213" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/head/Job.h</url>
-          <line>183</line>
+        <line-breakpoint type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Job.h</url>
+          <line>145</line>
           <option name="timeStamp" value="217" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/head/Job.h</url>
-          <line>253</line>
+        <line-breakpoint type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Job.h</url>
+          <line>216</line>
           <option name="timeStamp" value="233" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/head/Job.h</url>
-          <line>256</line>
+        <line-breakpoint type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Job.h</url>
+          <line>219</line>
           <option name="timeStamp" value="234" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/head/Job.h</url>
-          <line>258</line>
+        <line-breakpoint type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Job.h</url>
+          <line>221</line>
           <option name="timeStamp" value="235" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/head/Job.h</url>
-          <line>260</line>
+        <line-breakpoint type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Job.h</url>
+          <line>223</line>
           <option name="timeStamp" value="236" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/head/Job.h</url>
-          <line>262</line>
+        <line-breakpoint type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Job.h</url>
+          <line>225</line>
           <option name="timeStamp" value="237" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/head/Job.h</url>
-          <line>265</line>
+        <line-breakpoint type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Job.h</url>
+          <line>228</line>
           <option name="timeStamp" value="238" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/head/Job.h</url>
-          <line>217</line>
+        <line-breakpoint type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Job.h</url>
+          <line>179</line>
           <option name="timeStamp" value="243" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/head/Job.h</url>
-          <line>219</line>
+        <line-breakpoint type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Job.h</url>
+          <line>181</line>
           <option name="timeStamp" value="244" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/src/main.cpp</url>
           <option name="timeStamp" value="245" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/head/Job.h</url>
-          <line>577</line>
-          <option name="timeStamp" value="263" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/head/Job.h</url>
-          <line>76</line>
+        <line-breakpoint type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Job.h</url>
+          <line>67</line>
           <option name="timeStamp" value="268" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/src/cmdt.cpp</url>
-          <line>309</line>
-          <option name="timeStamp" value="307" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/head/Job.h</url>
-          <line>410</line>
+        <line-breakpoint type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Job.h</url>
+          <line>363</line>
           <option name="timeStamp" value="312" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/head/Job.h</url>
-          <line>407</line>
+        <line-breakpoint type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Job.h</url>
+          <line>360</line>
           <option name="timeStamp" value="313" />
+        </line-breakpoint>
+        <line-breakpoint type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/cmdt.cpp</url>
+          <line>40</line>
+          <option name="timeStamp" value="319" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Job.h</url>
+          <line>400</line>
+          <option name="timeStamp" value="353" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -689,68 +640,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/predefined_ops.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="193" column="33" lean-forward="true" selection-start-line="193" selection-start-column="33" selection-end-line="193" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/allocated_ptr.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="79" selection-start-line="79" selection-end-line="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/f" />
-    <entry file="file://$PROJECT_DIR$/project/f_info" />
-    <entry file="file://C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/alloc_traits.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="454" selection-start-line="454" selection-end-line="454" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_algo.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="3767" selection-start-line="3767" selection-end-line="3767" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Job.cpp" />
-    <entry file="file://C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/ext/new_allocator.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="78" selection-start-line="78" selection-end-line="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dir/config" />
-    <entry file="file://C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/allocator.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="53" column="51" lean-forward="true" selection-start-line="53" selection-start-column="51" selection-end-line="53" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-192" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com.cpp" />
-    <entry file="file://$PROJECT_DIR$/com.h" />
-    <entry file="file://$PROJECT_DIR$/cmd.cpp" />
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="116" column="30" lean-forward="true" selection-start-line="116" selection-start-column="30" selection-end-line="116" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cmd.h" />
     <entry file="file://C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_function.h">
       <provider selected="true" editor-type-id="text-editor">
@@ -787,61 +676,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dir/cord/jobTable">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_list.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="152" selection-start-line="152" selection-end-line="152" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/dir/cord/jobTable" />
     <entry file="file://$PROJECT_DIR$/dir/word/jobTable">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_pair.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="189" selection-start-line="189" selection-end-line="189" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_queue.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="180" selection-start-line="180" selection-end-line="180" />
-          <folding>
-            <element signature="e#6777#6986#0" expanded="true" />
-            <element signature="e#8372#8852#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dir/word/jobTable_info">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="1" lean-forward="true" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dir/word/lookTable">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/dir/cord/jobTable_info">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="1" lean-forward="true" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dir/cord/lookTable">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="1" lean-forward="true" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/dir/cord/jobTable_info" />
+    <entry file="file://$PROJECT_DIR$/dir/cord/lookTable" />
     <entry file="file://C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_deque.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="167">
@@ -859,112 +702,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/head/IO.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-          <folding>
-            <element signature="e#84#100#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/head/Project.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-          <folding>
-            <element signature="e#655#836#0" expanded="true" />
-            <element signature="e#842#1528#1" />
-            <element signature="e#966#1210#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IO.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#2#0" expanded="true" />
-            <element signature="e#45#73#0" expanded="true" />
-            <element signature="e#275#462#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Project.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#2#0" expanded="true" />
-            <element signature="e#45#73#0" expanded="true" />
-            <element signature="e#547#1698#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/head/symbol.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_map.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="356" selection-start-line="356" selection-end-line="356" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/bb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/projects">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="17" lean-forward="true" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/list.tcc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="491" column="12" selection-start-line="491" selection-start-column="12" selection-end-line="491" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dir/test/jobTable">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_tree.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="203" selection-start-line="203" selection-end-line="203" />
-          <folding>
-            <element signature="e#45975#46470#0" expanded="true" />
-            <element signature="e#66593#67050#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/include/IO.h" />
+    <entry file="file://$PROJECT_DIR$/include/Project.h" />
+    <entry file="file://$PROJECT_DIR$/include/symbol.h" />
     <entry file="file://C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/basic_string.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -976,99 +716,253 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dir/test/jobTable_info">
+    <entry file="file://C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/list.tcc">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/symbol.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="133">
+          <caret line="81" selection-start-line="81" selection-end-line="81" />
           <folding>
-            <element signature="e#44#61#0" expanded="true" />
-            <element signature="e#962#1027#0" expanded="true" />
+            <element signature="e#12992#13390#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.cpp">
+    <entry file="file://C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_list.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        <state relative-caret-position="200">
+          <caret line="1376" selection-start-line="1376" selection-end-line="1376" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_queue.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="185" column="26" lean-forward="true" selection-start-line="185" selection-start-column="26" selection-end-line="185" selection-end-column="26" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#6777#6986#0" expanded="true" />
+            <element signature="e#8372#8852#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/head/Job.h">
+    <entry file="file://C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_map.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="589" column="16" lean-forward="true" selection-start-line="589" selection-start-column="16" selection-end-line="589" selection-end-column="16" />
+        <state relative-caret-position="177">
+          <caret line="1079" selection-start-line="1079" selection-end-line="1079" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_pair.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="189" selection-start-line="189" selection-end-line="189" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_tree.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="191" selection-start-line="191" selection-end-line="191" />
           <folding>
-            <element signature="e#44#59#0" expanded="true" />
-            <element signature="e#162#182#0" expanded="true" />
-            <element signature="e#2019#2245#0" expanded="true" />
-            <element signature="e#4353#4653#0" expanded="true" />
-            <element signature="e#7226#8021#0" expanded="true" />
-            <element signature="e#8711#8906#0" expanded="true" />
-            <element signature="e#8909#9304#0" expanded="true" />
-            <element signature="e#9305#9471#0" expanded="true" />
-            <element signature="e#9473#10150#0" expanded="true" />
-            <element signature="e#10152#10637#0" expanded="true" />
-            <element signature="e#10639#11125#0" expanded="true" />
-            <element signature="e#11405#11432#0" expanded="true" />
-            <element signature="e#11171#11242#0" expanded="true" />
-            <element signature="e#11730#13863#0" expanded="true" />
-            <element signature="e#14482#14641#0" expanded="true" />
-            <element signature="e#14643#16183#0" expanded="true" />
-            <marker date="1549211814815" expanded="true" signature="414:1959" ph="..." />
+            <element signature="e#45975#46470#0" expanded="true" />
+            <element signature="e#66593#67050#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/head/cmdt.h">
+    <entry file="file://$PROJECT_DIR$/dir/thread/jobTable_info">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dir/word/jobTable_info">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="21" column="19" lean-forward="true" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+        <state relative-caret-position="25">
+          <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/cmdline.h" />
+    <entry file="file://$PROJECT_DIR$/cmdline/test.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/cmds.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/IO.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
           <folding>
             <element signature="e#0#2#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Project.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#2#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/symbol.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1000">
+          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+          <folding>
+            <element signature="e#44#61#0" expanded="true" />
+            <element signature="e#213#294#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/projects">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dir/test/jobTable">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="7" lean-forward="true" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dir/test/lookTable">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dir/test/jobTable_info">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dir/test/freezeTable">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/bb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="36" selection-start-column="36" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/flag.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#2#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dir/aaa/freezeTable">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dir/aaa/jobTable">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dir/aaa/jobTable_info">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="1" lean-forward="true" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dir/aaa/lookTable">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dir/aaa/zeroTable">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cflag.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1202">
+          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#2#0" expanded="true" />
+            <element signature="e#49#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/cmdt.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#193#517#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/Job.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-244">
+          <caret line="213" selection-start-line="213" selection-end-line="213" />
+          <folding>
+            <element signature="e#44#59#0" expanded="true" />
+            <element signature="e#162#182#0" expanded="true" />
+            <element signature="e#2127#2176#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/cflag.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#101#118#0" expanded="true" />
+            <element signature="e#508#722#0" expanded="true" />
+            <element signature="e#775#946#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/cmdt.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="78" column="68" selection-start-line="78" selection-start-column="68" selection-end-line="78" selection-end-column="68" />
+        <state relative-caret-position="224">
+          <caret line="46" column="19" lean-forward="true" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="19" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <element signature="e#828#2221#0" expanded="true" />
-            <element signature="e#2388#3825#0" expanded="true" />
-            <element signature="e#3827#4612#0" expanded="true" />
-            <element signature="e#4614#4664#0" expanded="true" />
-            <element signature="e#4831#5879#0" expanded="true" />
-            <element signature="e#5881#6165#0" expanded="true" />
-            <element signature="e#6167#6956#0" expanded="true" />
-            <element signature="e#6980#7112#0" expanded="true" />
-            <element signature="e#7093#7464#0" expanded="true" />
-            <element signature="e#7466#7752#0" expanded="true" />
-            <element signature="e#7754#8031#0" expanded="true" />
-            <element signature="e#8033#8305#0" expanded="true" />
-            <element signature="e#8418#8438#0" expanded="true" />
-            <element signature="e#8959#9012#0" expanded="true" />
-            <element signature="e#10480#10523#0" expanded="true" />
-            <element signature="e#9014#9210#0" expanded="true" />
-            <element signature="e#9323#9404#0" expanded="true" />
-            <element signature="e#9406#9486#0" expanded="true" />
-            <element signature="e#9488#9521#0" expanded="true" />
-            <element signature="e#9523#9556#0" expanded="true" />
-            <element signature="e#9558#9591#0" expanded="true" />
-            <marker date="1549212084963" expanded="true" signature="2034:2352" ph="..." />
-            <marker date="1549212084963" expanded="true" signature="6366:7499" ph="{...}" />
+            <element signature="e#12075#12182#0" expanded="true" />
+            <marker date="1549987857960" expanded="true" signature="1513:2646" ph="{...}" />
           </folding>
         </state>
       </provider>

@@ -1,11 +1,8 @@
 //
-// Created by 39389_000 on 2019/2/12.
-//
-
-//
 
 #include <algorithm>
 #include <iostream>
+#include <map>
 #include "..\include\cflag.h"
 
 // 从a-z的全域映射,还需要添加A-Z的
@@ -68,7 +65,10 @@ std::map<char, int> eat_para
 size_t Cflag::collect_cmds(const std::string &cmd)
 {
     if (!is_valid(cmd))
+    {
+        throw_error_info();
         return 0;
+    }
 
     int idx = 0;
     std::string tmp_buf_cmd;
@@ -130,12 +130,16 @@ size_t Cflag::collect_cmds(const std::string &cmd)
 bool Cflag::is_valid(const std::string &cmd)
 {
 
-    int idx = 0;
+    int idx = 0, last_idx;
     size_t collect_para = m_scope - 1;
     for (size_t _i = 0;;)
     {
         if (jmp[idx].find(cmd[_i]) != jmp[idx].end())
+        {
+            e_path.push_back(cmd[_i]);
+            last_idx = idx;
             idx = jmp[idx][cmd[_i++]];
+        }
         else
             return false;
 
@@ -145,7 +149,10 @@ bool Cflag::is_valid(const std::string &cmd)
             int bf = _i;
             while (cmd[_i] != '-' && _i < cmd.size()) _i++;
             if (bf == _i) // 没有收集到任何字符, 即没有输入参数
+            {
+                m_error_code = -last_idx;
                 return false;
+            }
             else if (cmd[_i] == '-')
                 idx = 0;
             else
@@ -267,4 +274,44 @@ void Cflag::push(const std::string &ln, const std::string &sn, bool hp)
     else
         new_cmd = {__push(ln, hp, 2), __push(sn, hp, 1)};
     etab.push_back(new_cmd);
+}
+
+static char xxx[10];
+void Cflag::f(int depth, std::vector<std::string>& v, int level)
+{
+    level++;
+    if (depth== 99 || depth == 0)
+    {
+        v.emplace_back(xxx);
+        xxx[0] = 0;
+        return;
+    }
+    for(auto _m: jmp[depth])
+    {
+        xxx[level] = _m.first;
+        f(_m.second, v, level);
+    }
+}
+void Cflag::throw_error_info()
+{
+    std::vector<std::string> tmp;
+    std::string suffix ;
+    int idx = 0;
+    for(char& x: e_path)
+    {
+        if (x!='-')
+            suffix+=x;
+        idx = jmp[idx][x];
+    }
+
+    int x = -1; // for rec
+
+    if (m_error_code<0)
+        std::cout << "need param" << "\t";
+
+    std::cout << "You have inputted wrong command" << "\n";
+    std::cout << "The most likely commands are followed:" << "\n";
+    f(idx, tmp, x);
+    std::for_each(tmp.begin(),tmp.end(),[&suffix](std::string &x){if(!x.empty()) x = suffix+x;});
+    std::for_each(tmp.begin(),tmp.end(),[&suffix](std::string &x){if(!x.empty())  std::cout<<"\"" << x << "\""<<std::endl;});
 }
