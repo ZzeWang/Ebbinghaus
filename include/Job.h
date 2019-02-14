@@ -11,7 +11,7 @@
 
 #include "Project.h"
 #include "symbol.h"
-
+#include <cmake_config.h>
 project_table_item dpe{};
 
 using std::cout;
@@ -22,6 +22,8 @@ extern string msg_pjk_name;
 extern string msg_job_name;
 extern string msg_box;
 
+
+
 // struct job table item
 struct job_table_item
 {
@@ -30,9 +32,13 @@ public:
 
     // stat : status for a job, 0 unfrozen 1 frozen 2 beingCreated 3 normal
     job_table_item(const job_table_item &other) = default;
+
     job_table_item(int _id, int _cd, int et, int st) : job_id(_id), c_down(_cd), exec_times(et), stat(st) {};
+
     job_table_item &operator=(const job_table_item &other) = default;
+
     inline void clear() { job_id = 0, c_down = 0, exec_times = 0, stat = 0; };
+
     inline string format() const
     {
         return std::to_string(job_id) + "," + std::to_string(c_down) + "," + std::to_string(exec_times) + "," +
@@ -44,23 +50,161 @@ struct job_info_table_item_base
 {
     int job_id;
     int status;
+
 public :
+    void parse_field(const string& tmp, list<job_info_table_item_base>&);
     job_info_table_item_base(const int id, const int stat) : job_id(id), status(stat) {};
-    virtual bool operator==(const job_info_table_item_base &other){return job_id == other.job_id;}
-    virtual string format(){return std::to_string(job_id) + "," + std::to_string(status) + "\n";}
+    virtual bool operator==(const job_info_table_item_base &other) { return job_id == other.job_id; }
+    virtual string format() { return std::to_string(job_id) + "," + std::to_string(status) + "\n"; }
     virtual ~job_info_table_item_base() {};
+    virtual string operator*() const =0;
 };
 
 struct job_info_table_item : public job_info_table_item_base
 {
     string word;
 public:
-    job_info_table_item(const int &_j, const string &_w, const int &_s) : job_info_table_item_base{_j, _s}, word(_w) {};
-    virtual string format() const final { return std::to_string(job_id) + "," + word + "," + std::to_string(status) + "\n"; }
+    job_info_table_item(const int &_j, const int &_s, const string &_w): job_info_table_item_base{_j, _s}, word(_w) {};
+    // I hope compiler implicitly convert a para to a object.
+    job_info_table_item(const string& para) : job_info_table_item_base(0, 0), word(para) {};
+    virtual string format() const final
+    {
+        return std::to_string(job_id) + ","  + std::to_string(status) + "," + word  + "\n";
+    }
+    void  parse_field(const string& tmp, list<job_info_table_item>& job_info_table)
+    {
+        int idx = 0, status=0;
+        job_info_table_item e(0,0,"");
+        for (; idx < tmp.size();)
+        {
+            while (status == 0 && isdigit(tmp[idx]))
+            {
+                e.job_id *= 10;
+                e.job_id += tmp[idx] - '0';
+                idx++;
+            }
+            if (tmp[idx] == ',' && status == 0)
+            {
+                idx++;
+                status = 1;
+            }
+            while (status == 1 && isdigit(tmp[idx]))
+            {
+                e.status *= 10;
+                e.status += tmp[idx] - '0';
+                idx++;
+            }
+            if (tmp[idx] == ',' && status == 1)
+            {
+                idx++;
+                status = 2;
+            }
+            while (status == 2 && isalpha(tmp[idx]))
+            {
+                e.word += tmp[idx];
+                idx++;
+            }
+            status = 3;
+            if (tmp[idx] == 'e')
+                break;
+            else if (status == 3 && tmp[idx] == '\n')
+            {
+                idx++;
+                status = 0;
+                job_info_table.push_back(e);
+                e = job_info_table_item(0, 0, "");
+                continue;
+            }
+        }
+    }
     virtual bool operator==(const job_info_table_item &other) const final { return word == other.word; };
+
     virtual bool operator==(const int other) const final { return job_id == other; };
-    virtual bool operator==(const string& other) const final { return word == other; };
+
+    virtual bool operator==(const string &other) const final { return word == other; };
+    virtual string operator*()const final{return word;};
 };
+
+struct job_info_table_for_net : public job_info_table_item_base
+{
+    string abbreviation;
+    string term;
+
+    job_info_table_for_net(const string &abb, const string &t)
+            : job_info_table_item_base(0, 0), abbreviation(abb), term(t) {}
+    job_info_table_for_net(const string& para)  : job_info_table_item_base(0, 0)
+    {
+        abbreviation = para.substr(0, para.find(':'));
+        term = para.substr(para.find(':')+1, para.size()-para.find(':')+1);
+    }
+    virtual string format() const final
+    {
+        return std::to_string(job_id) + ","+ std::to_string(status) + "," + abbreviation + "," + term + "\n";
+    }
+    virtual bool operator==(const job_info_table_for_net &other) const final { return abbreviation==other.abbreviation && term ==other.term;};
+    virtual bool operator==(const int other) const final { return job_id == other; };
+    virtual bool operator==(const string &other) const final { return abbreviation+term == other;};
+    virtual string operator*() const final {return abbreviation+":"+term;};
+    void  parse_field(const string& tmp, list<job_info_table_for_net>& job_info_table)
+    {
+        int idx = 0, status=0;
+        job_info_table_for_net e("");
+        for (; idx < tmp.size();)
+        {
+            while (status == 0 && isdigit(tmp[idx]))
+            {
+                e.job_id *= 10;
+                e.job_id += tmp[idx] - '0';
+                idx++;
+            }
+            if (tmp[idx] == ',' && status == 0)
+            {
+                idx++;
+                status = 1;
+            }
+            while (status == 1 && isdigit(tmp[idx]))
+            {
+                e.status *= 10;
+                e.status += tmp[idx] - '0';
+                idx++;
+            }
+            if (tmp[idx] == ',' && status == 1)
+            {
+                idx++;
+                status = 2;
+            }
+            while (status == 2 && isalpha(tmp[idx]))
+            {
+                e.abbreviation += tmp[idx];
+                idx++;
+            }
+            if (tmp[idx] == ',' && status == 2)
+            {
+                idx++;
+                status = 3;
+            }
+            while (status == 3 && isalpha(tmp[idx]))
+            {
+                e.term += tmp[idx];
+                idx++;
+            }
+            status = 4;
+            if (tmp[idx] == 'e')
+                break;
+            else if (status == 4 && tmp[idx] == '\n')
+            {
+                idx++;
+                status = 0;
+                job_info_table.push_back(e);
+                e = job_info_table_for_net("");
+                continue;
+            }
+        }
+    }
+};
+
+static list<JOB_INFO_TYPE> mul_add_table;
+static list<job_table_item> mul_frozen_table;
 
 
 template<class Job_Info_Table_Item = job_info_table_item>
@@ -74,27 +218,45 @@ private:
     list<job_table_item> zero_table;
     list<job_table_item> frozen_table;
     IO io_buf;
+
     void __syn(const list<job_table_item> &_T, list<job_table_item> &_M);
 
 public:
     explicit
-    Job(const string &project) : io_buf(project), job_table(), job_info_table(), zero_table(){pre_load();};//make sure that project is the default project.
+    Job(const string &project) : io_buf(project), job_table(), job_info_table(),
+                                 zero_table() { pre_load(); };//make sure that project is the default project.
     void pre_load();
+
     int generate_cdown(int);
-    void addJob(const T);
+
+    void addJob(T);
+
     void addJobs();
+
     void addJobs(const string &_p);
+
     void load_job_table_for(list<job_table_item> &which, const string &path);
+
     void deleteJob(const T &it);
+    void addJobByParam(const string& param);
     void deleteJobById(const int it);
+
     void deleteJobByName(const string &);
+
     void freezeJobs();
+
     void freezeJob(const string &name);
+
     void freezeJob(const job_table_item it);
+
     void unfreezeJob(const T it);
+
     void unfreezeJob(const string &name);
+
     void startup();
+
     void finishJob();
+
     static int analyze(int input_stp, int stat)
     {
         msg_job_name = dpe.pjt_name;
@@ -129,14 +291,15 @@ public:
         }
         return -1;
     }
+
     void join();// join job_table and job_info_table using job_id;
     void put();
+
     virtual void get();
+
     inline void syn_zero_job_table() { __syn(zero_table, job_table); };
 };
 
-static list<Job<>::T> mul_add_table;
-static list<job_table_item> mul_frozen_table;
 
 #include <cstdio>
 
@@ -154,7 +317,7 @@ void Job<T>::join()
         {
             if (lk.job_id == info.job_id)
             {
-                printf("%d\t%d\t%d\t%s\n", lk.job_id, lk.exec_times, lk.stat, info.word.c_str());
+                cout << info.format();
                 break;
             }
         }
@@ -215,7 +378,7 @@ void Job<T>::freezeJob(const string &name)
     msg_box = "in freeze job.";
 
     auto it = std::find_if(job_info_table.begin(), job_info_table.end(),
-                           [&name](const T &x) {return x == name; });
+                           [&name](const T &x) { return x == name; });
 
     if (it != job_info_table.end())
     {
@@ -223,7 +386,7 @@ void Job<T>::freezeJob(const string &name)
                               [&it](const job_table_item &x) { return x.job_id == it->job_id; });
         if (x != job_table.end())
         {
-            msg_job_name = it->word;
+            msg_job_name = **it;
             freezeJob(*x);
         } else
             jobDoesNotExist();
@@ -316,11 +479,11 @@ void Job<T>::addJobs(const string &_p)
             continue;
         else
         {
-            mul_add_table.push_back(T(0, _p.substr(per, suf - per), 0));
+            mul_add_table.emplace_back(_p.substr(per, suf - per));
             per = suf + 1;
         }
     }
-    mul_add_table.push_back(T(0, _p.substr(per, suf - per), 0));
+    mul_add_table.emplace_back(_p.substr(per, suf - per));
     addJobs();
 }
 
@@ -330,20 +493,25 @@ void Job<T>::addJobs()
     std::for_each(mul_add_table.begin(), mul_add_table.end(), [&](const T &x) { addJob(x); });
     mul_add_table.clear();
 }
-
 template<class T>
-void Job<T>::addJob(const T it)
+void Job<T>::addJobByParam(const string& param)
+{
+    addJob(T(param));
+}
+template<class T>
+void Job<T>::addJob(T it)
 {
     msg_job_name = std::to_string(it.job_id);
     msg_box = "in adding job.";
     auto res = std::find_if(job_info_table.begin(), job_info_table.end(),
-                            [&](const T &x) -> bool { return x==it; });
+                            [&](T &x) -> bool { return x == it; });
     if (res == job_info_table.end())
     {
         dpe.add_id();
         io_buf.set_block_board();
         job_table.emplace_back(dpe.cnt, 0, 0, 2);// stat = 2
-        job_info_table.push_back(T(dpe.cnt, it.word, it.status));
+        it.job_id = dpe.cnt;
+        job_info_table.emplace_back(it);
         jobAddSuccess();
     } else
     {
@@ -359,7 +527,7 @@ void Job<T>::deleteJobById(const int it)
     msg_job_name = std::to_string(it);
     msg_box = "in delete job by id.";
     auto size = job_table.size();
-    job_info_table.remove_if([&it](const T &item) -> bool { return item==it; });
+    job_info_table.remove_if([&it](const T &item) -> bool { return item == it; });
     job_table.remove_if([&it](job_table_item &item) { return it == item.job_id; });
     if (size - job_table.size() != 0)
     {
@@ -371,12 +539,12 @@ void Job<T>::deleteJobById(const int it)
 }
 
 template<class T>
-void Job<T>::deleteJob(const T& it)
+void Job<T>::deleteJob(const T &it)
 {
     msg_job_name = std::to_string(it.job_id);
     msg_box = "in delete job.";
     auto size = job_table.size();
-    job_info_table.remove_if([&it](const T &item) { return item==it; });
+    job_info_table.remove_if([&it](const T &item) { return item == it; });
     job_table.remove_if([&it](job_table_item &item) { return it.job_id == item.job_id; });
     if (size - job_table.size() != 0)
     {
@@ -408,7 +576,7 @@ void Job<T>::deleteJobByName(const string &name)
     }
     auto res = std::find_if(job_info_table.begin(), job_info_table.end(), [&name](const T &x)
     {
-        return x==name;
+        return x == name;
     });
     if (res != job_info_table.end())
         deleteJob(*res);
@@ -552,6 +720,7 @@ int Job<T>::generate_cdown(int exec)
     return exec >= 11 ? 6 : hash[exec];
 }
 
+
 template<class T>
 void Job<T>::get()
 {
@@ -559,55 +728,18 @@ void Job<T>::get()
     // every T must impl get() function,
     // the function supports the job's logical independence
     io_buf.job_read(dpe.pjt_path + "\\jobTable_info");
-    T e(0, "", 0);
     //each different T has different finite automation that
     // can parse the pattern
 
     // for a default job information table items, there are
     // a word field and a status field
     string tmp = io_buf.get_job_buf();
-    int status = 0;
 
-    for (int idx = 0; idx < tmp.size();)
-    {
-        while (status == 0 && isdigit(tmp[idx]))
-        {
-            e.job_id *= 10;
-            e.job_id += tmp[idx] - '0';
-            idx++;
-        }
-        if (tmp[idx] == ',' && status == 0)
-        {
-            idx++;
-            status = 2;
-        }
-        while (status == 2 && isalpha(tmp[idx]))
-        {
-            e.word += tmp[idx];
-            idx++;
-        }
-        if (status == 2 && tmp[idx] == ',')
-        {
-            idx++;
-            status = 3;
-        }
-        while (status == 3 && isdigit(tmp[idx]))
-        {
-            e.status *= 10;
-            e.status += tmp[idx] - '0';
-            idx++;
-        }
-        if (tmp[idx] == 'e')
-            break;
-        else if (status == 3 && tmp[idx] == '\n')
-        {
-            idx++;
-            status = 0;
-            job_info_table.push_back(e);
-            e = job_info_table_item(0, "", 0);
-            continue;
-        }
-    }
+    // because job_id and status are default field.
+    T e("");
+    e.parse_field(tmp, job_info_table);
+
+    // the left field
     msg_box = std::to_string(job_info_table.size());
     getSuccess();
 }

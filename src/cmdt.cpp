@@ -2,6 +2,7 @@
 #include <queue>
 #include <iostream>
 #include <cstring>
+#include <cmake_config.h>
 #include "../include/Job.h"
 #include "../include/cflag.h"
 
@@ -39,8 +40,9 @@ void help_msg()
 }
 
 
-Job<> jp("F:\\cppProject\\AAebb\\project");
-Project pjk("F:\\cppProject\\AAebb\\dir", "F:\\cppProject\\AAebb\\project");
+string dir("F:\\cppProject\\AAebb");
+Project pjk(dir+"\\dir", dir+"\\project");
+Job<JOB_INFO_TYPE> jp(dir+"\\project");
 Cflag cflag(100);
 
 
@@ -76,7 +78,7 @@ void call(int stat)
             pjk.put();
             break;
         case 26:
-            jp.addJob(job_info_table_item(0, string(arg), 0));
+            jp.addJobByParam(string(arg));
             jp.put();
             break;
         case 28:
