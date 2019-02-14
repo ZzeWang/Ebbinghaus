@@ -40,7 +40,7 @@ void help_msg()
 }
 
 
-string dir("F:\\cppProject\\AAebb");
+static const string dir(INSTALL_DIR);
 Project pjk(dir+"\\dir", dir+"\\project");
 Job<JOB_INFO_TYPE> jp(dir+"\\project");
 Cflag cflag(100);
@@ -48,20 +48,22 @@ Cflag cflag(100);
 
 void call(int stat)
 {
-
     switch (stat)
     {
         case 1:
+            jp.pre_load();
             jp.join();
             break;
         case 2:
             help_msg();
             break;
         case 16:
+            jp.pre_load();
             jp.startup();
             jp.join();
             break;
         case 35:
+            jp.pre_load();
             jp.finishJob();
             jp.put();
             break;
@@ -71,25 +73,28 @@ void call(int stat)
             break;
         case 6:
             pjk.changeProj(arg);
-            jp.pre_load();
             break;
         case 7:
             pjk.deleteProj(arg);
             pjk.put();
             break;
         case 26:
+            jp.pre_load();
             jp.addJobByParam(string(arg));
             jp.put();
             break;
         case 28:
+            jp.pre_load();
             jp.addJobs(string(arg));
             jp.put();
             break;
         case 82:
+            jp.pre_load();
             jp.unfreezeJob(string(arg));
             jp.put();
             break;
         case 47:
+            jp.pre_load();
             jp.freezeJob(string(arg));
             jp.put();
             break;
@@ -97,8 +102,12 @@ void call(int stat)
             cout << "call job.frozens() with arg=" << arg << endl;
             break;
         case 77:
+            jp.pre_load();
             jp.deleteJobByName(string(arg));
             jp.put();
+            break;
+        default:
+            // ;
             break;
     }
     arg[0] = 0;
@@ -161,11 +170,6 @@ void run(const string& cmd)
         strcpy(arg, ret._long_name.para.c_str());
         call(c_id);
     }
-
-}
-
-void help()
-{
 
 }
 

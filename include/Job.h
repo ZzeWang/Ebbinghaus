@@ -143,7 +143,7 @@ struct job_info_table_for_net : public job_info_table_item_base
     }
     virtual bool operator==(const job_info_table_for_net &other) const final { return abbreviation==other.abbreviation && term ==other.term;};
     virtual bool operator==(const int other) const final { return job_id == other; };
-    virtual bool operator==(const string &other) const final { return abbreviation+term == other;};
+    virtual bool operator==(const string &other) const final { return abbreviation==other || term == other;};
     virtual string operator*() const final {return abbreviation+":"+term;};
     void  parse_field(const string& tmp, list<job_info_table_for_net>& job_info_table)
     {
@@ -224,39 +224,24 @@ private:
 public:
     explicit
     Job(const string &project) : io_buf(project), job_table(), job_info_table(),
-                                 zero_table() { pre_load(); };//make sure that project is the default project.
+                                 zero_table() { };
     void pre_load();
-
     int generate_cdown(int);
-
     void addJob(T);
-
     void addJobs();
-
     void addJobs(const string &_p);
-
     void load_job_table_for(list<job_table_item> &which, const string &path);
-
     void deleteJob(const T &it);
     void addJobByParam(const string& param);
     void deleteJobById(const int it);
-
     void deleteJobByName(const string &);
-
     void freezeJobs();
-
     void freezeJob(const string &name);
-
     void freezeJob(const job_table_item it);
-
     void unfreezeJob(const T it);
-
     void unfreezeJob(const string &name);
-
     void startup();
-
     void finishJob();
-
     static int analyze(int input_stp, int stat)
     {
         msg_job_name = dpe.pjt_name;
@@ -291,12 +276,9 @@ public:
         }
         return -1;
     }
-
     void join();// join job_table and job_info_table using job_id;
     void put();
-
     virtual void get();
-
     inline void syn_zero_job_table() { __syn(zero_table, job_table); };
 };
 
