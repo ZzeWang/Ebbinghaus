@@ -17,7 +17,9 @@ Ebbinghaus能够控制每个添加进入项目的项（一个基本单位），�
 Ebbinghaus分为三个主要的类：**Job, Project,IO**.Project提供对每个不同的项目的管理。比如你创建了一个记单词的项目word，然后你又为了记住古诗词而由添加了一个项目poem，project提供管理这些项目的基本操作；Job提供每一个项目里每个项的管理操作。比如你向word项目中添加一个单词“first”，然后又向poem中添加了“沁园春雪”。除此之外，Job还提供了一层**项独立性**：显然，一个word项和一个poem项绝对不是同一类事物，例如，在word中，你可能仅仅存放一个单词即可，而在poem中，你可能需要存放一整段诗词。
 
 **结构job\_info\_table\_base**和**结构job\_table\_item**提供了这层独立性。Job类只负责操作job\_table\_item。job\_table\_item仅有job\_id,staus等最基本的几个用于描述每个项属性的字段，而job\_info\_table\_base则记录了每个不同项的不同之处。它是一个基类，每个不同的job\_info类都应该继承它，然后编写你自己的job info
-![]()
+
+![](https://raw.githubusercontent.com/TongChuanLiudehua/Ebbinghaus/master/dir/ebb/cengci.PNG)
+
 我在Job.h中已经编写了两个job info类，一个是用于记忆单词的job\_info\_item，一个是job\_info\_for\_net(用于记忆计算机网络中名词的缩写和全拼)
 
 IO类提供存储独立性，我是基于文件系统而编写的，如果你想使用数据库，那么修改IO即可
@@ -60,57 +62,57 @@ or add multiple jobs at once
 
 1. 创建Word项目
 
-![]()
+![](https://raw.githubusercontent.com/TongChuanLiudehua/Ebbinghaus/master/dir/ebb/createpro.PNG)
 
 2. 创建另一个项目other
 
-![]()
+![](https://raw.githubusercontent.com/TongChuanLiudehua/Ebbinghaus/master/dir/ebb/createproother.PNG)
 
 3. 切换至Word项目
 
-![]()
+![](https://raw.githubusercontent.com/TongChuanLiudehua/Ebbinghaus/master/dir/ebb/changepro.PNG)
 
 4. 向Word项目中添加一个项frist（单词）
 
-![]()
+![](https://raw.githubusercontent.com/TongChuanLiudehua/Ebbinghaus/master/dir/ebb/add.PNG)
 
 5. 启动Word
 
-![]()
+![](https://raw.githubusercontent.com/TongChuanLiudehua/Ebbinghaus/master/dir/ebb/start.PNG)
 
 6. 查看Word
 
-![]()
+![](https://raw.githubusercontent.com/TongChuanLiudehua/Ebbinghaus/master/dir/ebb/look.PNG)
 
-![]()
+![](https://raw.githubusercontent.com/TongChuanLiudehua/Ebbinghaus/master/dir/ebb/look2.PNG)
 
 7. 结束Word
 
-![]()
+![](https://raw.githubusercontent.com/TongChuanLiudehua/Ebbinghaus/master/dir/ebb/done.PNG)
 
 8. 一次添加多个项
 
-![]()
+![](https://raw.githubusercontent.com/TongChuanLiudehua/Ebbinghaus/master/dir/ebb/muladd.PNG)
 
 9. 组合命令
 
-![]()
+![](https://raw.githubusercontent.com/TongChuanLiudehua/Ebbinghaus/master/dir/ebb/组合.PNG)
 
 10. 暂停项
 
-![]()
+![](https://raw.githubusercontent.com/TongChuanLiudehua/Ebbinghaus/master/dir/ebb/frozen.PNG)
 
 11. 恢复项
 
-![]()
+![](https://raw.githubusercontent.com/TongChuanLiudehua/Ebbinghaus/master/dir/ebb/free.PNG)
 
 12. 删除项
 
-![]()
+![](https://raw.githubusercontent.com/TongChuanLiudehua/Ebbinghaus/master/dir/ebb/remove.PNG)
 
 13. 删除Word项目
 
-![]()
+![](https://raw.githubusercontent.com/TongChuanLiudehua/Ebbinghaus/master/dir/ebb/deletepro.PNG)
 
 ## 后记
 
