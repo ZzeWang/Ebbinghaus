@@ -116,4 +116,4 @@ or add multiple jobs at once
 
 ## 后记
 
-Ebbinghaus所用的命令行解析程序是我编写的Cflag [连接](),如果感兴趣欢迎浏览
+Ebbinghaus所用的命令行解析程序是我编写的[Cflag](https://github.com/TongChuanLiudehua/Cflag),如果感兴趣欢迎浏览
